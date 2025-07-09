@@ -1,0 +1,80 @@
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background-color: #f4f7f9;
+  justify-content: center;
+  border-radius: 5px
+}
+
+.value {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: black;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.value:not(:active):hover,
+.value:focus {
+  background-color:azure;
+}
+
+.value:focus,
+.value:active {
+  background-color: #c2c4c5;
+  outline: none;
+}
+
+.value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 5px;
+  height: 80%;
+  background-color: #2F81F7;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.value:focus::before,
+.value:active::before {
+  opacity: 1;
+}
+
+.value svg {
+  width: 15px
+}
+
+.input-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.input {
+  z-index: 10;
+}
+
+.settings-button-wrapper {
+  position: relative;
+}
+
+.settings-modal {
+  position: absolute;
+  top: 100%; /* Just below the button */
+  left: 0;    /* Aligned with the left of the button */
+  margin-top: 5px;
+  background-color: var(--modal-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 999;
+  padding: 15px;
+  min-width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}

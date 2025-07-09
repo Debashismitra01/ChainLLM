@@ -1,0 +1,74 @@
+/* ===== Global Reset ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ===== App Layout ===== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.sidebar-container.closed ~ .main-content {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+/* ===== Remove unwanted styles from main areas ===== */
+.main-content,
+.main {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* ===== Dark Theme ===== */
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --modal-bg: #1e1e1e;
+  --sidebar-bg: #2c2c2c;
+  --highlight-bg: #333;
+  --accent-color: #50b8e7;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ===== Light Theme ===== */
+body.light-theme {
+  --bg-color: #f8f8f8;
+  --text-color: #000000;
+  --modal-bg: #ffffff;
+  --sidebar-bg: #f1f1f1;
+  --highlight-bg: #e0e0e0;
+  --accent-color: #007bff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .sidebar-container.closed ~ .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

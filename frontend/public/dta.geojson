@@ -1,0 +1,75 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "Beachfront Villa",
+        "minimum_nights": 3,
+        "price": 250,
+        "rating": 4.8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.921, 21.476]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "name": "Downtown Apartment",
+        "minimum_nights": 1,
+        "price": 120,
+        "rating": 4.5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.858, 21.306]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "name": "Mountain View Cottage",
+        "minimum_nights": 7,
+        "price": 180,
+        "rating": 4.9
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.793, 21.392]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "name": "Historic District Loft",
+        "minimum_nights": 2,
+        "price": 150,
+        "rating": 4.3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.845, 21.315]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "name": "Luxury Resort Suite",
+        "minimum_nights": 5,
+        "price": 350,
+        "rating": 4.7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-157.827, 21.279]
+      }
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_920e0e9afa8f5ff11dc6f763278d131a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_920e0e9afa8f5ff11dc6f763278d131a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_920e0e9afa8f5ff11dc6f763278d131a = L.map(
+                "map_920e0e9afa8f5ff11dc6f763278d131a",
+                {
+                    center: [28.6139, 77.209],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d1ded9b6c0409ca6bcc668e333589fb5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d1ded9b6c0409ca6bcc668e333589fb5.addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+        
+    
+            var tile_layer_a50bb09eae1cd1bbe4b440b8289718a6 = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Map data: \u00a9 OpenTopoMap (CC-BY-SA)",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a50bb09eae1cd1bbe4b440b8289718a6.addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+        
+    
+            var layer_control_ae048e6b53410a267c80b8161ddc5e87_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_d1ded9b6c0409ca6bcc668e333589fb5,
+                },
+                overlays :  {
+                    "Topo Map" : tile_layer_a50bb09eae1cd1bbe4b440b8289718a6,
+                },
+            };
+            let layer_control_ae048e6b53410a267c80b8161ddc5e87 = L.control.layers(
+                layer_control_ae048e6b53410a267c80b8161ddc5e87_layers.base_layers,
+                layer_control_ae048e6b53410a267c80b8161ddc5e87_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+
+        
+    
+            var measure_control_3d604e6c96dff5d453debcc222bcdb11 = new L.Control.Measure(
+                {
+  "position": "topright",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+});
+            map_920e0e9afa8f5ff11dc6f763278d131a.addControl(measure_control_3d604e6c96dff5d453debcc222bcdb11);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            var tile_layer_64576f8842fc92dd4d7cf7b62c3d23ff = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_fb8874e379a4090ac661ae142f33f2b5 = new L.Control.MiniMap(
+                tile_layer_64576f8842fc92dd4d7cf7b62c3d23ff,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_920e0e9afa8f5ff11dc6f763278d131a.addControl(mini_map_fb8874e379a4090ac661ae142f33f2b5);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+        
+    
+            var mouse_position_ca82db00e78bd7f7b60b32712f5529f2 = new L.Control.MousePosition(
+                {
+  "position": "bottomright",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_ca82db00e78bd7f7b60b32712f5529f2.options["latFormatter"] =
+                undefined;
+            mouse_position_ca82db00e78bd7f7b60b32712f5529f2.options["lngFormatter"] =
+                undefined;
+            map_920e0e9afa8f5ff11dc6f763278d131a.addControl(mouse_position_ca82db00e78bd7f7b60b32712f5529f2);
+        
+    
+            var marker_0bb3bb7a72530c70422e08d879f4887a = L.marker(
+                [28.6139, 77.209],
+                {
+}
+            ).addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+        
+    
+            var icon_200cfb9edd654d0f577897e09a38ee67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86c8a08d4f9339f27f88248df641dc22 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a290ef233c809dbb5353a145cb9acc0 = $(<div id="html_0a290ef233c809dbb5353a145cb9acc0" style="width: 100.0%; height: 100.0%;">New Delhi - Capital of India</div>)[0];
+                popup_86c8a08d4f9339f27f88248df641dc22.setContent(html_0a290ef233c809dbb5353a145cb9acc0);
+            
+        
+
+        marker_0bb3bb7a72530c70422e08d879f4887a.bindPopup(popup_86c8a08d4f9339f27f88248df641dc22)
+        ;
+
+        
+    
+    
+            marker_0bb3bb7a72530c70422e08d879f4887a.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bb3bb7a72530c70422e08d879f4887a.setIcon(icon_200cfb9edd654d0f577897e09a38ee67);
+            
+    
+            var marker_2fe8e2d526a08347fe2255da7e6e88b2 = L.marker(
+                [28.6562, 77.241],
+                {
+}
+            ).addTo(map_920e0e9afa8f5ff11dc6f763278d131a);
+        
+    
+            var icon_62a2fa8f53cde8468a5bdf3b74b4b271 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "castle",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d51da87bc753913d48c28b0127933e0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_101ea1f4ec33f502f1d5ea9635296e08 = $(<div id="html_101ea1f4ec33f502f1d5ea9635296e08" style="width: 100.0%; height: 100.0%;">Red Fort - Historic Monument</div>)[0];
+                popup_d51da87bc753913d48c28b0127933e0e.setContent(html_101ea1f4ec33f502f1d5ea9635296e08);
+            
+        
+
+        marker_2fe8e2d526a08347fe2255da7e6e88b2.bindPopup(popup_d51da87bc753913d48c28b0127933e0e)
+        ;
+
+        
+    
+    
+            marker_2fe8e2d526a08347fe2255da7e6e88b2.bindTooltip(
+                `<div>
+                     UNESCO World Heritage Site
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fe8e2d526a08347fe2255da7e6e88b2.setIcon(icon_62a2fa8f53cde8468a5bdf3b74b4b271);
+            
+</script>
+</html>
