@@ -22,7 +22,7 @@ graph TD
     B -->|Generate taskId + trigger LLM| C[Ollama Mistral]
     C -->|LLM Response + taskId| D[FastAPI GIS Engine]
     D -->|Process GIS task| E[MongoDB]
-    B -->|Track task metadata| F[MySQL]
+    B -->|Track task metadata and Authentication| F[MySQL]
     E -->|Result files| G[Frontend polls/view]
 ```
 
