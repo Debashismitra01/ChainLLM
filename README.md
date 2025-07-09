@@ -18,8 +18,8 @@ A full-stack intelligent system that turns natural language queries into GIS wor
 
 ```mermaid
 graph TD
-    A[Frontend (Next.js)] -->|/llm/ask| B[Spring Boot API]
-    B -->|Generate taskId + trigger LLM| C[Ollama (Mistral)]
+    A[Frontend Next.js] -->|/llm/ask| B[Spring Boot API]
+    B -->|Generate taskId + trigger LLM| C[Ollama Mistral]
     C -->|LLM Response + taskId| D[FastAPI GIS Engine]
     D -->|Process GIS task| E[MongoDB]
     B -->|Track task metadata| F[MySQL]
