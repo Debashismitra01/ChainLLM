@@ -181,9 +181,9 @@ ollama run mistral
 | Endpoint               | Method | Description                     |
 | ---------------------- | ------ | ------------------------------- |
 | `/llm/ask`             | POST   | Submit prompt, get `taskId`     |
-| `/gis/process`         | POST   | Called internally by Java app   |
+| `/api`         | POST   | Called internally by Java app   |
 | `/auth/login`          | POST   | Auth endpoint                   |
-| `/task/:taskId/result` | GET    | (Optional) fetch processed data |
+| `/api/task/:taskId/` | GET    | (Optional) fetch processed data |
 
 ---
 
